@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SaveLife | Organ Donation Awareness</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav>
+    <div class="logo">SaveLife</div>
+    <ul>
+        <li><a href="#index">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#organs">Organs</a></li>
+        <li><a href="#stats">Statistics</a></li>
+        <li><a href="#register">Register</a></li>
+    </ul>
+</nav>
+
+<header class="hero">
+    <div class="hero-content">
+        <h1>Give The Gift of Life</h1>
+        <p>Your decision today can save multiple lives tomorrow.</p>
+        <a href="#register" class="btn">Become a Donor</a>
+    </div>
+</header>
+
+<section id="about" class="about-section">
+    <div class="about-container">
+        <img src="images/about.jpg" alt="Organ Donation">
+        <div>
+            <h2>About Organ Donation</h2>
+            <p>
+                Organ donation is a noble act that helps patients suffering from organ failure.
+                Through ethical and legal transplantation procedures, one donor can save up to
+                eight lives and enhance many more.
+            </p>
+            <p>
+                Our mission is to increase awareness, ensure transparency, and promote safe
+                organ donation practices.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section id="organs">
+    <h2 class="section-title">Organs That Can Be Donated</h2>
+    <div class="organ-grid">
+        <div class="organ-card">
+            <img src="images/heart.jpg" alt="Heart">
+            <h3>Heart</h3>
+        </div>
+        <div class="organ-card">
+            <img src="images/kidney.jpg" alt="Kidney">
+            <h3>Kidney</h3>
+        </div>
+        <div class="organ-card">
+            <img src="images/liver.jpg" alt="Liver">
+            <h3>Liver</h3>
+        </div>
+        <div class="organ-card">
+            <img src="images/lungs.jpg" alt="Lungs">
+            <h3>Lungs</h3>
+        </div>
+    </div>
+</section>
+
+<section id="stats" class="stats">
+    <div class="stat-box">
+        <h2>0 </h2>
+        <p>Lives Saved Per Donor</p>
+    </div>
+    <div class="stat-box">
+        <h2>0</h2>
+        <p>People Helped Through Tissue Donation</p>
+    </div>
+    <div class="stat-box">
+        <h2>0</h2>
+        <p>Patients Waiting Daily</p>
+    </div>
+</section>
+
+<section class="testimonials">
+    <h2 class="section-title">What Doctors Say</h2>
+    <div class="testimonial-container">
+        <div class="testimonial">
+            <img src="images/doctor.jpg" alt="Doctor">
+            <p>"Organ donation is the greatest gift one can give."</p>
+        </div>
+        <div class="testimonial">
+            <img src="images/patient.jpg" alt="Patient">
+            <p>"Because of a donor, I got a second chance at life."</p>
+        </div>
+    </div>
+</section>
+
+<div>
+
+<section id="register" class="light">
+    <h2>Donor Registration</h2>
+    <form id="donorForm" method="POST" action="register.php">
+
+    <input type="text" name="name" id="name" placeholder="Full Name" required>
+
+    <input type="email" name="email" id="email" placeholder="Email Address" required>
+
+    <input type="tel" name="phone" id="phone" placeholder="Phone Number" required>
+
+    <select name="organ" id="organ" required>
+        <option value="">Select Organ</option>
+        <option value="Heart">Heart</option>
+        <option value="Kidney">Kidney</option>
+        <option value="Liver">Liver</option>
+        <option value="Lungs">Lungs</option>
+    </select>
+
+    <textarea name="message" id="message" placeholder="Why do you want to donate?"></textarea>
+
+    <button type="submit">Register</button>
+
+</form>
+</div>```````
+<div>
+
+<footer>
+    © 2026 SaveLife | Organ Donation Awareness Platform
+</footer>
+</div>
+</body>
+</html>
