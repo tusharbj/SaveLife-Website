@@ -1,219 +1,280 @@
-html, body {
-    height: 100%;
+/* ========== GLOBAL SETTINGS ========== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
     font-family: 'Segoe UI', sans-serif;
+    background: #f4f6f9;
+    line-height: 1.6;
+    overflow-x: hidden;
 }
 
-body{
-    background:#f4f6f9;
+/* Container */
+section {
+    padding: clamp(60px, 8vw, 120px) 8%;
 }
 
-nav{
-    display:flex;
-    justify-content:space-between;
-    padding:20px 8%;
-    background:white;
-    position:fixed;
-    width:100%;
-    box-shadow:0 3px 10px rgba(0,0,0,0.1);
-    z-index:1000;
+/* ========== NAVBAR ========== */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 8%;
+    background: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
 }
 
-nav ul{
-    display:flex;
-    gap:20px;
-    list-style:none;
+.logo {
+    font-size: clamp(18px, 2vw, 24px);
+    font-weight: bold;
+    color: #e63946;
 }
 
-nav a{
-    text-decoration:none;
-    color:#333;
-    font-weight:bold;
+.nav-list {
+    display: flex;
+    gap: 25px;
+    list-style: none;
 }
 
-.logo{
-    color:#e63946;
-    font-size:22px;
+.nav-list a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    transition: 0.3s;
 }
 
-.hero{
-    height:100vh;
-    background:url("images/hero.jpg") center/cover no-repeat;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    color:white;
+.nav-list a:hover {
+    color: #e63946;
 }
 
-.hero-content{
-    background:rgba(0,0,0,0.5);
-    padding:40px;
-    border-radius:10px;
+.menu-toggle {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
 }
 
-.btn{
-    display:inline-block;
-    margin-top:20px;
-    padding:12px 30px;
-    background:#e63946;
-    color:white;
-    border-radius:25px;
-    text-decoration:none;
-    transition:0.3s;
+/* ========== HERO SECTION ========== */
+
+.hero {
+    min-height: 100vh;
+    background: url("images/hero.jpg") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    color: white;
 }
 
-.btn:hover{
-    background:#c9184a;
+.hero-content {
+    background: rgba(0,0,0,0.6);
+    padding: clamp(20px, 5vw, 50px);
+    border-radius: 12px;
+    max-width: 700px;
+    width: 100%;
 }
 
-section{
-    padding:100px 8%;
+.hero h1 {
+    font-size: clamp(24px, 5vw, 48px);
 }
 
-.about-container{
-    display:flex;
-    gap:40px;
-    align-items:center;
+.hero p {
+    margin-top: 15px;
+    font-size: clamp(14px, 2.5vw, 20px);
 }
 
-.about-container img{
-    width:50%;
-    border-radius:10px;
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    background: #e63946;
+    color: white;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: 0.3s;
 }
 
-.organ-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:30px;
+.btn:hover {
+    background: #c9184a;
 }
 
-.organ-card img{
-    width:100%;
-    height:200px;
-    object-fit:cover;
-    border-radius:10px;
+/* ========== ABOUT SECTION ========== */
+
+.about-container {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-.organ-card{
-    text-align:center;
+.about-container img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 12px;
 }
 
-.stats{
-    background:#e63946;
-    color:white;
-    display:flex;
-    justify-content:space-around;
-    text-align:center;
+/* ========== ORGAN GRID ========== */
+
+.organ-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
 }
 
-.stat-box h2{
-    font-size:40px;
+.organ-card {
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
 
-.testimonials{
-    background:white;
-    text-align:center;
+.organ-card:hover {
+    transform: translateY(-6px);
 }
 
-.testimonial-container{
-    display:flex;
-    justify-content:center;
-    gap:40px;
-    margin-top:40px;
+.organ-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
-.testimonial img{
-    width:120px;
-    height:120px;
-    border-radius:50%;
-    object-fit:cover;
-}
+/* ========== STATS ========== */
 
-.cta{
-    background:#f1faee;
-    text-align:center;
-}
-
-.light{
-    background:white;
-}
-.light h2{
+.stats {
+    background: #e63946;
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
     text-align: center;
 }
-.cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:30px;
-    margin-top:30px;
+
+.stat-box h2 {
+    font-size: clamp(30px, 4vw, 50px);
 }
 
-.card{
-    background:white;
-    padding:30px;
-    border-radius:10px;
-    box-shadow:0 5px 20px rgba(0,0,0,0.1);
-    transition:0.4s;
+/* ========== TESTIMONIALS ========== */
+
+.testimonial-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 40px;
 }
 
-.card:hover{
-    transform:translateY(-10px);
+.testimonial {
+    max-width: 300px;
+    text-align: center;
 }
 
-form{
-    max-width:500px;
-    margin:auto;
-    display:flex;
-    flex-direction:column;
-    gap:15px;
+.testimonial img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
-input,select,textarea{
-    padding:10px;
-    border-radius:5px;
-    border:1px solid #ccc;
+/* ========== FORM ========== */
+
+form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
-button{
-    padding:10px;
-    border:none;
-    border-radius:25px;
-    background:#e63946;
-    color:white;
-    cursor:pointer;
-    transition:0.3s;
+input, select, textarea {
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    width: 100%;
 }
 
-button:hover{
-    background:#c9184a;
+button {
+    padding: 12px;
+    border: none;
+    border-radius: 30px;
+    background: #e63946;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
+button:hover {
+    background: #c9184a;
+}
+
+/* ========== FOOTER ========== */
 
 footer {
     background: black;
     color: white;
     text-align: center;
     padding: 20px;
-    margin-top: auto;
 }
 
-section, header {
-    margin-top: 80px;
+/* ========== MOBILE RESPONSIVE ========== */
+
+@media (max-width: 768px) {
+
+    .nav-list {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        align-items: center;
+        display: none;
+        padding: 20px 0;
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .stats {
+        flex-direction: column;
+    }
+
+    .about-container {
+        flex-direction: column;
+    }
 }
 
+/* Extra small devices */
+@media (max-width: 480px) {
 
+    .hero-content {
+        padding: 20px;
+    }
 
-@media(max-width:768px){
-    nav ul{display:none;}
+    section {
+        padding: 60px 5%;
+    }
 }
