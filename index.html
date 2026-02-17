@@ -5,7 +5,6 @@
     <title>SaveLife | Organ Donation Awareness</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </head>
 <body>
@@ -40,14 +39,17 @@
         <div>
             <h2>About Organ Donation</h2>
             <p>
-                Organ donation is a noble act that helps patients suffering from organ failure.
-                Through ethical and legal transplantation procedures, one donor can save up to
-                eight lives and enhance many more.
+                Organ donation is a life-saving medical procedure that allows healthy organs and tissues
+                to be transplanted into patients suffering from end-stage organ failure. It is regulated,
+                ethical, and performed under strict medical supervision.
             </p>
+
             <p>
-                Our mission is to increase awareness, ensure transparency, and promote safe
-                organ donation practices.
+                A single donor can save up to eight lives through organ donation and improve over 75 lives
+                through tissue donation. Our platform promotes awareness, transparency, and responsible
+                donor registration.
             </p>
+
         </div>
     </div>
 </section>
@@ -75,18 +77,21 @@
 </section>
 
 <section id="stats" class="stats">
+    <section id="stats" class="stats">
     <div class="stat-box">
-        <h2>0 </h2>
-        <p>Lives Saved Per Donor</p>
+        <h2>8</h2>
+        <p>Lives Saved Per Organ Donor</p>
     </div>
     <div class="stat-box">
-        <h2>0</h2>
-        <p>People Helped Through Tissue Donation</p>
+        <h2>75+</h2>
+        <p>Lives Improved Through Tissue Donation</p>
     </div>
     <div class="stat-box">
-        <h2>0</h2>
-        <p>Patients Waiting Daily</p>
+        <h2>100,000+</h2>
+        <p>Patients Waiting Worldwide</p>
     </div>
+</section>
+
 </section>
 
 <section class="testimonials">
@@ -94,11 +99,12 @@
     <div class="testimonial-container">
         <div class="testimonial">
             <img src="images/doctor.jpg" alt="Doctor">
-            <p>"Organ donation is the greatest gift one can give."</p>
+            <p>"Organ donation is not just a medical act — it is a humanitarian responsibility."</p>
         </div>
         <div class="testimonial">
             <img src="images/patient.jpg" alt="Patient">
-            <p>"Because of a donor, I got a second chance at life."</p>
+            <p>"Every registered donor increases the chance of survival for critically ill patients."
+</p>
         </div>
     </div>
 </section>
@@ -128,12 +134,32 @@
     <button type="submit">Register</button>
 
 </form>
-</div>```````
+</div>
 <div>
 
 <footer>
-    © 2026 SaveLife | Organ Donation Awareness Platform
+    <div class="footer-container">
+        <p><strong>SaveLife</strong> | Organ Donation Awareness Platform</p>
+        <p>Promoting Ethical & Transparent Organ Donation Since 2026</p>
+        <p>© 2026 All Rights Reserved</p>
+    </div>
 </footer>
+
 </div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const menu = document.getElementById("mobile-menu");
+    const navList = document.querySelector(".nav-list");
+
+    if(menu){
+        menu.addEventListener("click", function () {
+            navList.classList.toggle("active");
+        });
+    }
+
+});
+</script>
+
 </body>
 </html>
