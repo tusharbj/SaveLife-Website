@@ -28,6 +28,4 @@ document.getElementById("donorForm").addEventListener("submit", function(e){
 });
 
 
-menu.addEventListener("click", () => {
-    navList.classList.toggle("active");
-});
+
